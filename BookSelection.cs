@@ -21,7 +21,7 @@ namespace ProjectEDforreal
         public BookSelection(int custId)
         {
             InitializeComponent();
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\EDP_Project\\WinFormsApp1\\Database1.mdf;Integrated Security=True;";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\ProjectEDforreal\\ProjectEDforreal\\Database1.mdf;Integrated Security=True";
             customerId = custId;
             dateTimePickerDS1.Value = DateTime.Today;
             dateTimePickerDR1.Value = DateTime.Today.AddDays(7);
@@ -158,7 +158,8 @@ namespace ProjectEDforreal
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
-                        bookBindingSource1.ResetBindings(false);
+                        //bookBindingSource1.ResetBindings(false);
+                        LoadData();
                     }
                 }
 
@@ -184,7 +185,8 @@ namespace ProjectEDforreal
                     cmd.ExecuteNonQuery();
                     conn.Close();
 
-                    customerBookBindingSource1.ResetBindings(false);
+                    //customerBookBindingSource1.ResetBindings(false);
+                    LoadData();
                 }
             }
 
@@ -197,20 +199,7 @@ namespace ProjectEDforreal
 
        
 
-        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) // Ensure it's not header row
-            {
-                DataGridViewRow row = dataGridView2.Rows[e.RowIndex];
-
-                textBoxTitle1.Text = row.Cells[1].Value.ToString();
-                textBoxISBN1.Text = row.Cells[0].Value.ToString();
-                textBoxAuthor1.Text = row.Cells[3].Value.ToString();
-
-                // You can also store primary key if needed
-                // int customerId = Convert.ToInt32(row.Cells["cust_id"].Value);
-            }
-        }
+        
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
@@ -271,8 +260,23 @@ namespace ProjectEDforreal
         private void button1_Click(object sender, EventArgs e)
         {
             Login page = new Login();
-            page.ShowDialog();
+            page.Show();
             this.Close();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure it's not header row
+            {
+                DataGridViewRow row = dataGridView2.Rows[e.RowIndex];
+
+                textBoxTitle1.Text = row.Cells[1].Value.ToString();
+                textBoxISBN1.Text = row.Cells[0].Value.ToString();
+                textBoxAuthor1.Text = row.Cells[3].Value.ToString();
+
+                // You can also store primary key if needed
+                // int customerId = Convert.ToInt32(row.Cells["cust_id"].Value);
+            }
         }
     }
 }

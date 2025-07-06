@@ -13,7 +13,7 @@ namespace ProjectEDforreal
         {
             InitializeComponent();
             comboBoxRole.Items.AddRange(new string[] { "Admin", "Customer" });
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\EDP_Project\\WinFormsApp1\\Database1.mdf;Integrated Security=True;";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\ProjectEDforreal\\ProjectEDforreal\\Database1.mdf;Integrated Security=True";
         }
 
         
@@ -112,26 +112,7 @@ namespace ProjectEDforreal
                 }
 
 
-            //if (role == "Admin")
-            //{
-            //    if (email.EndsWith("@admin.shareshelf.my") && password == "admin123")
-            //    {
-            //        AdminData adminForm = new AdminData();
-            //        adminForm.Show();
-            //        this.Hide();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Invalid admin credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else // Customer
-            //{
-            //    // In real app, validate against database
-            //    BookSelection bookForm = new BookSelection();
-            //    bookForm.Show();
-            //    this.Hide();
-            //}
+            
         }
 
         private void linkLabelSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

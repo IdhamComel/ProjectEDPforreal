@@ -23,12 +23,12 @@ namespace ProjectEDforreal
             InitializeComponent();
             CustomerId = custId;
             loadData();
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\EDP_Project\\WinFormsApp1\\Database1.mdf;Integrated Security=True;";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\ProjectEDforreal\\ProjectEDforreal\\Database1.mdf;Integrated Security=True";
         }
 
         private void loadData()
         {
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\EDP_Project\\WinFormsApp1\\Database1.mdf;Integrated Security=True;";
+            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\ProjectEDforreal\\ProjectEDforreal\\Database1.mdf;Integrated Security=True";
 
             string query = "SELECT * FROM Customer_Book WHERE cust_id = @id";
 
@@ -114,7 +114,7 @@ namespace ProjectEDforreal
 
             MessageBox.Show("Payment completed.", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Information);
             BookSelection form = new BookSelection(CustomerId);
-            form.ShowDialog();
+            form.Show();
             this.Close();
 
 
@@ -153,17 +153,7 @@ namespace ProjectEDforreal
 
         private void buttonEdit1_Click(object sender, EventArgs e)
         {
-            //string query = "DELETE FROM Customer_Book WHERE order_id = @id AND status = 'In Order'";
-            //using (SqlConnection conn = new SqlConnection(connectionString))
-            //{
-            //    using (SqlCommand cmd = new SqlCommand(query, conn))
-            //    {
-            //        cmd.Parameters.AddWithValue("@id", orderIDLabel.Text.Trim());
-            //    }
-            //}
-
-            //MessageBox.Show("Your order is deleted");
-            //loadData();
+           
 
             string query = "DELETE FROM Customer_Book WHERE order_id = @id AND status = 'In Order'";
 
@@ -198,7 +188,7 @@ namespace ProjectEDforreal
         private void button1_Click(object sender, EventArgs e)
         {
             BookSelection page = new BookSelection(CustomerId);
-            page.ShowDialog();
+            page.Show();
             this.Close();
         }
     }

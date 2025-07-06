@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
@@ -48,29 +47,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePickerDR1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customerBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new ProjectEDforreal.Database1DataSet();
             this.label2 = new System.Windows.Forms.Label();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.customerBookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.customer_BookTableAdapter = new ProjectEDforreal.Database1DataSetTableAdapters.Customer_BookTableAdapter();
-            this.bookTableAdapter = new ProjectEDforreal.Database1DataSetTableAdapters.BookTableAdapter();
             this.pictureBoxBook = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -257,30 +242,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fill Up The Book\'s Detail";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(295, 335);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 119);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // customerBookBindingSource
-            // 
-            this.customerBookBindingSource.DataMember = "Customer_Book";
-            this.customerBookBindingSource.DataSource = this.database1DataSetBindingSource;
-            // 
-            // database1DataSetBindingSource
-            // 
-            this.database1DataSetBindingSource.DataSource = this.database1DataSet;
-            this.database1DataSetBindingSource.Position = 0;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -289,39 +250,6 @@
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Available Books:";
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.database1DataSetBindingSource;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(25, 335);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(240, 119);
-            this.dataGridView2.TabIndex = 13;
-            this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
-            // 
-            // bookBindingSource1
-            // 
-            this.bookBindingSource1.DataMember = "Book";
-            this.bookBindingSource1.DataSource = this.database1DataSetBindingSource;
-            // 
-            // customerBookBindingSource1
-            // 
-            this.customerBookBindingSource1.DataMember = "Customer_Book";
-            this.customerBookBindingSource1.DataSource = this.database1DataSetBindingSource;
-            // 
-            // customer_BookTableAdapter
-            // 
-            this.customer_BookTableAdapter.ClearBeforeFill = true;
-            // 
-            // bookTableAdapter
-            // 
-            this.bookTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBoxBook
             // 
@@ -345,15 +273,32 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(295, 324);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(379, 150);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(25, 324);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 129);
+            this.dataGridView2.TabIndex = 16;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
             // BookSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonProceed1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.linkLabelPriceDetails);
@@ -368,15 +313,9 @@
             this.Text = "BookSelection";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,17 +343,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePickerDR1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource database1DataSetBindingSource;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource customerBookBindingSource;
-        private Database1DataSetTableAdapters.Customer_BookTableAdapter customer_BookTableAdapter;
+        //private Database1DataSetTableAdapters.Customer_BookTableAdapter customer_BookTableAdapter;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource bookBindingSource;
-        private Database1DataSetTableAdapters.BookTableAdapter bookTableAdapter;
-        private System.Windows.Forms.BindingSource customerBookBindingSource1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource bookBindingSource1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
